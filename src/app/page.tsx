@@ -1,6 +1,5 @@
 import Header from "@/components/header";
 import { ModeToggle } from "@/components/mode-toggle";
-import SubHeader from "@/components/sub-header";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Mail } from "lucide-react";
 import Image from "next/image";
