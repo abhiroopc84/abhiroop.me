@@ -1,22 +1,28 @@
+'use client'
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 const Header = () => {
+  const pathname = usePathname();
+
   return (
-    <div className="flex justify-between flex-row gap-2 p-3 text-[0.9rem] font-medium font-jetbrainsmono">
+    <div className="flex justify-between flex-row gap-2 p-3 text-[0.95rem] font-medium font-jetbrainsmono">
       <div className="flex gap-2">
-        <a href="/" className="underline underline-offset-4">
+        <Link href="/" className="underline underline-offset-4">
           abhiroop
-        </a>
+        </Link>
         <div className="flex flex-col">
           <div className="flex gap-2">
             /
-            <a href="/about" className="underline underline-offset-4">
+            <Link href="/about" className={`link ${pathname === '/about' ? 'text-fuchsia-500' : ''} underline underline-offset-4`}>
               about
-            </a>
+            </Link>
           </div>
           <div className="flex gap-2">
             /
-            <a href="/projects" className="underline underline-offset-4">
+            <Link href="/projects" className={`link ${pathname === '/projects' ? 'text-fuchsia-500' : ''} underline underline-offset-4`}>
               projects
-            </a>
+            </Link>
           </div>
         </div>
       </div>
