@@ -6,7 +6,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex justify-between flex-row gap-2 p-3 text-[0.95rem] font-medium font-jetbrainsmono">
+    <div className="flex justify-between flex-row gap-2 p-3 font-jetbrainsmono">
       <div className="flex gap-2">
         <Link href="/" className="underline underline-offset-4">
           abhiroop

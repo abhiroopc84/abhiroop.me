@@ -41,7 +41,7 @@ const About = () => {
           ))}
         </div>
       </div>
-      <div className="mt-24">
+      <div className="fixed bottom-5 w-full">
         <p className="w-2/5">
           <span>
             this site was built using next.js and shadcn/ui components.
