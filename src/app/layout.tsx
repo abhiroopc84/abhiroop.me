@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/header";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const jetbrains_mono = JetBrains_Mono({ subsets: ["latin"] });
 
@@ -37,7 +39,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="p-6">
+            <Header />
+            {children}
+            <div className="fixed bottom-4 right-4">
+              <ModeToggle />
+            </div>
+          </div>
         </ThemeProvider>
       </body>
     </html>
