@@ -39,10 +39,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="p-6">
+          <div className="relative p-3 md:p-6 min-h-dvh flex flex-col max-w-dvw">
             <Header />
             {children}
-            <div className="fixed bottom-4 right-4">
+            <div className="fixed bottom-5 right-5 md:bottom-8 md:right-8">
               <ModeToggle />
             </div>
           </div>
