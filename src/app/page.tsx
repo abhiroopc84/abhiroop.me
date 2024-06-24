@@ -6,10 +6,15 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex h-full flex-col p-3 mt-8">
-      <div className="">hey, i&apos;m abhiroop reddy.</div>
-      <div className="">i&apos;m a student and a web developer.</div>
-      <div className="fixed bottom-5">
+    <div className="flex flex-1 h-full flex-col p-3 mt-8 justify-between">
+      <div>
+        <p>
+          <span>hey, i&apos;m abhiroop reddy.</span>
+          <br />
+          <span>i&apos;m a student and a web developer.</span>
+        </p>
+      </div>
+      <div>
         <a
           href="mailto:abhiroopc84@gmail.com"
           className="flex flex-row items-center gap-2"

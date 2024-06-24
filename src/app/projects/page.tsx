@@ -3,9 +3,9 @@ import Link from "next/link";
 
 const Projects = () => {
   return (
-    <div className="p-2 mt-8 flex flex-col gap-4">
+    <div className="p-3 mt-8 flex-1 flex flex-col gap-4">
       {projects.map((project) => (
-        <div className="flex flex-col w-2/5" key={project.name}>
+        <div className="flex flex-col w-full md:w-1/2" key={project.name}>
           <h3>
             <Link href={project.link} className="underline underline-offset-4 text-red-500">
               {project.name}
