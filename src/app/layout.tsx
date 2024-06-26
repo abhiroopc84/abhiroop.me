@@ -5,7 +5,10 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
 import { ModeToggle } from "@/components/mode-toggle";
 
-const jetbrains_mono = JetBrains_Mono({ subsets: ["latin"] });
+const jetbrains_mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+});
 
 export const metadata: Metadata = {
   title: "abhiroop",
@@ -32,14 +35,14 @@ export default function RootLayout({
           media="(prefers-color-scheme: dark)"
         />
       </head>
-      <body className={jetbrains_mono.className}>
+      <body className={`${jetbrains_mono.variable} font-mono`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative p-3 md:p-6 min-h-dvh flex flex-col max-w-dvw">
+          <div className="relative p-3 md:p-6 min-h-dvh flex flex-col">
             <Header />
             {children}
             <div className="fixed bottom-5 right-5 md:bottom-8 md:right-8">

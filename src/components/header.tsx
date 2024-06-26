@@ -30,10 +30,10 @@ const Header = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col md:flex-row md:gap-2">
+      <div className="flex flex-col lg:flex-row lg:gap-2">
         {socials.map((social, index) => (
           <div key={social.name}>
-            <div className="hidden md:flex gap-2">
+            <div className="hidden lg:flex gap-2">
               <a
                 href={social.link}
                 target="_blank"
@@ -43,20 +43,14 @@ const Header = () => {
               </a>
               {index !== socials.length - 1 && <span>/</span>}
             </div>
-            <div className="flex md:hidden gap-2">
+            <div className="flex lg:hidden gap-2">
               <span>/</span>
               <a
                 href={social.link}
                 target="_blank"
                 className="underline underline-offset-4"
               >
-                <Image
-                  className="dark:invert"
-                  src={social.icon}
-                  alt={`${social.name} icon`}
-                  height={20}
-                  width={20}
-                />
+                {social.icon}
               </a>
             </div>
           </div>
