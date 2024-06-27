@@ -18,9 +18,12 @@ const Resume = () => {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button variant="link" className="p-0 underline underline-offset-4 text-base font-extrabold">
+        <Button
+          variant="link"
+          className="p-0 underline underline-offset-4 text-base font-extrabold"
+        >
+          <FileText className="w-4 h-4 mr-1" />
           resume
-          <FileText className="w-4 h-4 ml-1" />
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent className="bg-transparent border-0 justify-center items-center">
