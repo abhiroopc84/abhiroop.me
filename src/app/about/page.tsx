@@ -22,6 +22,9 @@ const About = () => {
           </div>
         </div>
         <Skills />
+        <div className="flex justify-start">
+          <Resume />
+        </div>
       </div>
       <Separator className="md:hidden" />
       <div>

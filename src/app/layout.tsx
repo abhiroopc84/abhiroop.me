@@ -42,7 +42,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="relative p-3 md:p-6 min-h-dvh flex flex-col">
+          <div vaul-drawer-wrapper="" className="relative p-3 md:p-6 min-h-dvh flex flex-col">
             <Header />
             {children}
             <div className="fixed bottom-5 right-5 md:bottom-8 md:right-8">
