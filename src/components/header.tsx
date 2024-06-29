@@ -22,7 +22,7 @@ const Header = () => {
                 href={page.link}
                 className={`link ${
                   pathname === page.link ? "text-red-500" : ""
-                } underline underline-offset-4`}
+                } underline  underline-offset-4`}
               >
                 {page.name}
               </Link>

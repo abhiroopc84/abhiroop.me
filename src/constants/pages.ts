@@ -7,10 +7,10 @@ const pages = [
     name: "projects",
     link: "/projects",
   },
-  {
-    name: "blog",
-    link: "/blog"
-  }
+  // {
+  //   name: "blog",
+  //   link: "https://blog.abhiroop.me/"
+  // }
 ];
 
 export default pages;
