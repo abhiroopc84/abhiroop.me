@@ -6,10 +6,10 @@ const projects = [
       "a form based resume generator with a latex resume generator framework.",
   },
   {
-    name: "imdb api",
-    link: "https://github.com/abhiroopc84/imdb-api",
+    name: "Swirl UI",
+    link: "https://github.com/abhiroopc84/swirl-ui",
     description:
-      "an api to scrape movie details, and series/episodes details from the IMDb site.",
+      "beautiful animated components built with next.js, typescript, tailwind css, and framer motion.",
   },
 ];
 
