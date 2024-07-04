@@ -4,7 +4,7 @@ const Description = () => {
       <span>my name is abhiroop reddy.</span>
       <br />
       <span>
-        a third year undergraduate student pursuing bachelor of engineering in
+        a fourth year undergraduate student pursuing bachelor of engineering in
         computer science and engineering.
       </span>
       <br />

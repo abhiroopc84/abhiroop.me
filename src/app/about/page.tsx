@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <div className="p-2 mt-8 flex-1 flex flex-col justify-between gap-4">
+    <div className="flex-1 flex flex-col justify-between gap-4">
       <div className="flex flex-col gap-8 justify-between">
         <div className="flex flex-col lg:flex-row gap-8 justify-between">
           <Description />

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-1 h-full flex-col p-3 mt-8 justify-between">
+    <div className="flex flex-1 h-full flex-col justify-between">
       <div>
         <p>
           <span>hey, i&apos;m abhiroop reddy.</span>
