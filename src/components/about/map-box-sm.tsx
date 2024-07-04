@@ -8,8 +8,9 @@ import { useRef, useState } from "react";
 import type { MapRef } from "react-map-gl";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { Skeleton } from "../ui/skeleton";
 
-const MapBox = () => {
+const MapBoxSm = () => {
   const mapRef = useRef<MapRef>(null);
   const coords = {
     long: 78.47267012382946,
@@ -68,6 +69,7 @@ const MapBox = () => {
   return (
     <div className="flex rounded-xl">
       <div className="flex rounded-xl relative overflow-hidden w-fit justify-items-center items-center">
+        <Skeleton className={`absolute top-0 left-0 rounded-xl w-full h-full z-50 ${mapLoad?"hidden":""}`}/>
         <Map
           mapboxAccessToken="pk.eyJ1IjoiYWJoaXJvb3BjIiwiYSI6ImNseHQwY3cwbDAwOWoycXNjZzJwaTlpMGYifQ.EQCzNJpB_ZrfqXVeKtNrjg"
           initialViewState={{
@@ -80,6 +82,7 @@ const MapBox = () => {
             height: 300,
             borderRadius: "0.75rem",
             fontFamily: "var(--font-jetbrains-mono)",
+            opacity: `${mapLoad? 1:0}`
           }}
           mapStyle={
             resolvedTheme === "dark"
@@ -123,7 +126,7 @@ const MapBox = () => {
           height={0}
           alt="cloud"
           draggable="false"
-          className={`animate-cloud-bounce blur-sm brightness-50 opacity-20 absolute top-0 right-0 w-80 h-auto`}
+          className={`animate-cloud-bounce blur-sm brightness-50 absolute top-0 right-0 w-80 h-auto ${mapLoad?"flex opacity-20":"hidden"}`}
         />
         <div>
           <Button
@@ -148,4 +151,4 @@ const MapBox = () => {
   );
 };
 
-export default MapBox;
+export default MapBoxSm;
