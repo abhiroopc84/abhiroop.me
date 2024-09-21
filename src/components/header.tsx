@@ -1,76 +1,59 @@
 "use client";
-import pages from "@/constants/pages";
-import socials from "@/constants/socials";
-import { motion } from "framer-motion";
-import Image from "next/image";
+
+import socials from "@/config/socials";
+import { RoughNotation } from "react-rough-notation";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import home from "@/config/home";
 
 const Header = () => {
   const pathname = usePathname();
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ ease: "easeInOut", duration: 0.75 }}
-    >
-      <div className="flex justify-between flex-row gap-2 p-3">
-        <div className="flex gap-2">
+    <div>
+      <div className="flex justify-between flex-row gap-2 items-center">
+        <div className="flex gap-2 items-center">
           <Link
-            href="/"
-            className={`${
-              pathname === "/" ? "" : "underline underline-offset-4"
-            }`}
+            href={home.link}
+            className={`${pathname === "/" ? "visible" : "hidden"} h-fit`}
           >
-            abhiroop
+            <RoughNotation
+              type="underline"
+              show={true}
+              padding={2}
+              strokeWidth={1.5}
+            >
+              {home.name}
+            </RoughNotation>
           </Link>
-          <div className="flex flex-col">
-            {pages.map((page) => (
-              <div className="flex gap-2" key={page.name}>
-                <span>/</span>
-                <Link
-                  href={page.link}
-                  className={`link ${
-                    pathname === page.link
-                      ? "animate-text-color-animation"
-                      : "underline underline-offset-4"
-                  } `}
-                >
-                  {page.name}
-                </Link>
-              </div>
-            ))}
-          </div>
+          <Link
+            href={home.link}
+            className={`${pathname === "/" ? "hidden" : "visible"} h-fit`}
+          >
+            {home.name}
+          </Link>
+          /
         </div>
-        <div className="flex flex-col lg:flex-row lg:gap-2">
+        <div className="flex flex-row gap-2 items-center">
           {socials.map((social, index) => (
             <div key={social.name}>
               <div className="hidden lg:flex gap-2">
-                <a
-                  href={social.link}
-                  target="_blank"
-                  className="underline underline-offset-4"
-                >
+                <a href={social.link} target="_blank">
                   {social.name}
                 </a>
                 {index !== socials.length - 1 && <span>/</span>}
               </div>
               <div className="flex lg:hidden gap-2">
-                <span>/</span>
-                <a
-                  href={social.link}
-                  target="_blank"
-                  className="underline underline-offset-4"
-                >
+                <a href={social.link} target="_blank">
                   {social.icon}
                 </a>
+                {index !== socials.length - 1 && <span>/</span>}
               </div>
             </div>
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
