@@ -19,15 +19,8 @@ export default function RootLayout({
       <head>
         <link
           rel="icon"
-          href="/favicon-light.ico"
+          href="/favicon.ico"
           sizes="any"
-          media="(prefers-color-scheme: light)"
-        />
-        <link
-          href="favicon-dark.ico"
-          rel="icon"
-          sizes="any"
-          media="(prefers-color-scheme: dark)"
         />
       </head>
       <body>
