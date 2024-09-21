@@ -1,19 +1,12 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 import Header from "@/components/header";
-import { ModeToggle } from "@/components/mode-toggle";
-import { AnimatePresence, motion } from "framer-motion";
-import Wrapper from "./wrapper";
-
-const jetbrains_mono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-});
+import { ModeToggle } from "@/components/theme/mode-toggle";
+import { GeistMono } from "geist/font/mono";
 
 export const metadata: Metadata = {
-  title: "abhiroop",
+  title: "arrc",
 };
 
 export default function RootLayout({
@@ -22,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={GeistMono.className}>
       <head>
         <link
           rel="icon"
@@ -37,26 +30,24 @@ export default function RootLayout({
           media="(prefers-color-scheme: dark)"
         />
       </head>
-      <body className={`${jetbrains_mono.variable} font-mono`}>
-        <Wrapper>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div
+            vaul-drawer-wrapper=""
+            className="relative p-6 min-h-dvh flex flex-col"
           >
-            <div
-              vaul-drawer-wrapper=""
-              className="relative p-3 md:p-6 min-h-dvh flex flex-col"
-            >
-              <Header />
-              {children}
-              <div className="fixed bottom-5 right-5 md:bottom-8 md:right-8">
-                <ModeToggle />
-              </div>
+            <Header />
+            {children}
+            <div className="absolute bottom-6 right-6">
+              <ModeToggle />
             </div>
-          </ThemeProvider>
-        </Wrapper>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
