@@ -11,7 +11,13 @@ const Projects = () => {
   return (
     <div className="flex flex-col gap-4 lg:w-1/2">
       <span>
-        <RoughNotation type="box" show={true} padding={5} strokeWidth={1.5}>
+        <RoughNotation
+          animationDuration={1000}
+          type="box"
+          show={true}
+          padding={5}
+          strokeWidth={1.5}
+        >
           projects
         </RoughNotation>
       </span>
@@ -21,6 +27,7 @@ const Projects = () => {
             <Link href={project.link}>
               <RoughNotation
                 type="underline"
+                animationDuration={1000}
                 color={resolvedTheme == "dark" ? "yellow" : "purple"}
                 show={true}
                 padding={2}

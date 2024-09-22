@@ -19,6 +19,7 @@ const Header = () => {
           >
             <RoughNotation
               type="underline"
+              animationDuration={1000}
               show={true}
               padding={2}
               strokeWidth={1.5}

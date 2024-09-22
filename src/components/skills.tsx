@@ -10,7 +10,13 @@ const Skills = () => {
   return (
     <div className="flex flex-col gap-4">
       <span>
-        <RoughNotation type="box" show={true} padding={5} strokeWidth={1.5}>
+        <RoughNotation
+          animationDuration={1000}
+          type="box"
+          show={true}
+          padding={5}
+          strokeWidth={1.5}
+        >
           skills
         </RoughNotation>
       </span>
@@ -21,13 +27,19 @@ const Skills = () => {
             {skills[skillCategory].map((skill, index) => {
               if (index === skills[skillCategory].length - 1) {
                 return (
-                  <span key={skill.name} className="flex flex-row items-center gap-2">
+                  <span
+                    key={skill.name}
+                    className="flex flex-row items-center gap-2"
+                  >
                     {skill.icon}
                   </span>
                 );
               } else {
                 return (
-                  <span key={skill.name} className="flex flex-row items-center gap-2">
+                  <span
+                    key={skill.name}
+                    className="flex flex-row items-center gap-2"
+                  >
                     {skill.icon}
                   </span>
                 );
